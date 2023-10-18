@@ -179,7 +179,7 @@ img {
     max-width: 1440px;
     padding: 188px 0;
     background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-            rgba(46, 47, 66, 0.70)), url(../images/other/topbar-bg.jpg);
+            rgba(46, 47, 66, 0.70)), url(../images/bg_s/desktop/hero_bg_desktop_1x.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -195,7 +195,7 @@ img {
     .topbar {
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
                 rgba(46, 47, 66, 0.70)),
-            url(../images/other/topbar-bg2x.jpg);
+            url(../images/bg_s/desktop/hero_bg_desktop_2x.webp);
     }
 }
 
@@ -595,13 +595,14 @@ img {
     line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--white);
-    cursor: pointer;
+    cursor: not-allowed;
     background-color: var(--brand-c);
     border: none;
     border-radius: 4px;
 }
 
 .telegram-icon {
+    fill: var(--white);
     margin-left: 16px;
 }
 
@@ -697,6 +698,10 @@ img {
 }
 
 .topbar-form-input {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #5a5a5b;
     width: 100%;
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -737,13 +742,12 @@ img {
 }
 
 .topbar-form-textarea {
-    border: 1px solid rgba(46, 47, 66, 0.4);
     width: 100%;
     height: 120px;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
+    color: #5a5a5b;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
@@ -896,7 +900,7 @@ PHONE*/
     .topbar {
         padding: 72px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-                rgba(46, 47, 66, 0.70)), url(../images/other/topbar-bg-mobile.jpg);
+                rgba(46, 47, 66, 0.70)), url(../images/bg_s/mobile/hero_bg_mobile_1x.webp);
         max-width: 100%;
     }
 
@@ -1197,7 +1201,7 @@ PHONE*/
         max-width: 100%;
         padding: 112px 0;
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-                rgba(46, 47, 66, 0.70)), url(../images/other/topbar-bg-tablet.jpg);
+                rgba(46, 47, 66, 0.70)), url(../images/bg_s/desktop/hero_bg_desktop_1x.webp);
     }
 
 
@@ -1306,7 +1310,7 @@ PHONE*/
     .topbar {
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
                 rgba(46, 47, 66, 0.70)),
-            url(../images/other/topbar-bg-mobile2x.png);
+            url(../images/bg_s/mobile/hero_bg_mobile_2x.webp);
     }
 }
 
@@ -1314,6 +1318,6 @@ PHONE*/
     .topbar {
         background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
                 rgba(46, 47, 66, 0.70)),
-            url(../images/other/topbar-bg-tablet2x.jpg);
+            url(../images/bg_s/desktop/hero_bg_desktop_2x.webp);
     }
 }
