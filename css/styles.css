@@ -50,10 +50,14 @@
 :root {
     --main-text-c: #434455;
     --main-a-c: #2E2F42;
-    --brand-c: #4D5AE5;
+    --brand-c: #6572ff;
     --hover-c: #404bbf;
     --footer-hover-c: #31d0aa;
     --white: #ffffff;
+    --background-gradient: rgba(46, 47, 66, 0.70);
+    --logo-shadow-active: #474747;
+    --interior-content-bg: #f4f4fd;
+    --form-input-text: #5a5a5b;
 }
 
 body {
@@ -118,7 +122,7 @@ img {
 }
 
 .logo:active {
-    text-shadow: 0px 2px 16px #474747;
+    text-shadow: 0px 2px 16px var(--logo-shadow-active);
 }
 
 .page-nav {
@@ -226,8 +230,8 @@ img {
 .topbar {
     max-width: 1440px;
     padding: 188px 0;
-    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-            rgba(46, 47, 66, 0.70)), url(../images/bg_s/desktop/hero_bg_desktop_1x.webp);
+    background-image: linear-gradient(to bottom, var(--background-gradient),
+            var(--background-gradient)), url(../images/bg_s/desktop/hero_bg_desktop_1x.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -241,8 +245,8 @@ img {
 
 @media (min-resolution: 192dpi) {
     .topbar {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-                rgba(46, 47, 66, 0.70)),
+        background-image: linear-gradient(to bottom, var(--background-gradient),
+                var(--background-gradient)),
             url(../images/bg_s/desktop/hero_bg_desktop_2x.webp);
     }
 }
@@ -296,7 +300,7 @@ img {
     align-items: center;
     justify-content: center;
     height: 112px;
-    background-color: #f4f4fd;
+    background-color: var(--interior-content-bg);
     border-radius: 4px;
     margin-bottom: 8px;
     border: 1px solid #8E8F99;
@@ -377,7 +381,7 @@ img {
 }
 
 .team {
-    background-color: #F4F4FD;
+    background-color: var(--interior-content-bg);
     padding: 120px 0;
 }
 
@@ -436,7 +440,7 @@ img {
 }
 
 .member-personal-page-icon {
-    fill: #F4F4FD;
+    fill: var(--interior-content-bg);
 }
 
 .member-personal-page:hover,
@@ -494,9 +498,16 @@ img {
     overflow: hidden;
 }
 
+.overlay-box picture,
+.overlay-box picture img {
+    display: inline-block;
+    width: 360px;
+    height: 300px;
+}
+
 .overlay-portfolio {
     background-color: var(--brand-c);
-    color: #F4F4FD;
+    color: var(--interior-content-bg);
     position: absolute;
     top: 0;
     left: 0;
@@ -539,11 +550,11 @@ img {
 }
 
 .footer-logo-web {
-    color: #f4f4fd;
+    color: var(--interior-content-bg);
 }
 
 .footer-text {
-    color: #f4f4fd;
+    color: var(--interior-content-bg);
     max-width: 264px;
 }
 
@@ -583,7 +594,7 @@ img {
 }
 
 .company-page-icon {
-    fill: #F4F4FD;
+    fill: var(--interior-content-bg);
 }
 
 .company-social-networks-item:hover,
@@ -749,7 +760,7 @@ img {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #5a5a5b;
+    color: var(--form-input-text);
     width: 100%;
     height: 40px;
     border: 1px solid rgba(46, 47, 66, 0.4);
@@ -767,7 +778,7 @@ img {
 .topbar-form-icon-person {
     position: absolute;
     left: 16px;
-    top: 58%;
+    top: 50%;
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -795,7 +806,7 @@ img {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: #5a5a5b;
+    color: var(--form-input-text);
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     background-color: transparent;
@@ -836,17 +847,14 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         border 250ms cubic-bezier(0.4, 0, 0.2, 1),
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
     fill: transparent;
-
 }
 
 .visually-hidden:checked+.topbar-form-label-checkbox .policy-check {
     background-color: var(--hover-c);
     border: none;
-    fill: #f4f4fd;
+    fill: var(--hover-c);
 }
 
 .policy-text {
@@ -947,8 +955,8 @@ PHONE*/
 
     .topbar {
         padding: 72px 0;
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-                rgba(46, 47, 66, 0.70)), url(../images/bg_s/mobile/hero_bg_mobile_1x.webp);
+        background-image: linear-gradient(to bottom, var(--background-gradient),
+                var(--background-gradient)), url(../images/bg_s/mobile/hero_bg_mobile_1x.webp);
         max-width: 100%;
     }
 
@@ -1022,6 +1030,12 @@ PHONE*/
 
     .portfolio {
         padding: 96px 0;
+    }
+
+    .overlay-box picture,
+    .overlay-box picture img {
+        width: 288px;
+        height: 280px;
     }
 
     .portfolio-item-list {
@@ -1248,8 +1262,8 @@ PHONE*/
     .topbar {
         max-width: 100%;
         padding: 112px 0;
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-                rgba(46, 47, 66, 0.70)), url(../images/bg_s/desktop/hero_bg_desktop_1x.webp);
+        background-image: linear-gradient(to bottom, var(--background-gradient),
+                var(--background-gradient)), url(../images/bg_s/desktop/hero_bg_desktop_1x.webp);
     }
 
 
@@ -1331,6 +1345,12 @@ PHONE*/
 
     }
 
+    .overlay-box picture,
+    .overlay-box picture img {
+        width: 356px;
+        height: 300px;
+    }
+
     /* FOOTER */
 
     .footer .container {
@@ -1356,16 +1376,16 @@ PHONE*/
 
 @media (min-resolution: 192dpi) and (min-width: 320px) and (max-width: 767px) {
     .topbar {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-                rgba(46, 47, 66, 0.70)),
+        background-image: linear-gradient(to bottom, var(--background-gradient),
+                var(--background-gradient)),
             url(../images/bg_s/mobile/hero_bg_mobile_2x.webp);
     }
 }
 
 @media (min-resolution: 192dpi) and (min-width: 768px) and (max-width: 1157px) {
     .topbar {
-        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.70),
-                rgba(46, 47, 66, 0.70)),
+        background-image: linear-gradient(to bottom, var(--background-gradient),
+                var(--background-gradient)),
             url(../images/bg_s/desktop/hero_bg_desktop_2x.webp);
     }
 }
